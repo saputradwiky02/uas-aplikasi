@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+    </ion-buttons>
+    <ion-title class="ion-text-center" color="primary">Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+  <form>
+    <ion-item lines="full" color="dark">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full" color="dark">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" required></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col text-align: center>
+        <ion-button type="submit" color="primary" expand="block" [routerLink]="['/tabs']">MASUK</ion-button>
+        <p class="ion-text-center">Belum Punya Akun? <a [routerLink]="['/registration']" class="small-text">Daftar Disini</a></p>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
