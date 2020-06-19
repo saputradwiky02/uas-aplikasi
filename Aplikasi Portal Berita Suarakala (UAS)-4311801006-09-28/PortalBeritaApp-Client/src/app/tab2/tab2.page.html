@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Tambah Berita
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="dark">
+  <ion-header collapse="condense">
+    <ion-toolbar >
+      <ion-title size="large" color="primary">Tambah Berita</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-item color="dark">
+    <ion-label position="stacked">Judul</ion-label>
+    <ion-input [(ngModel)]="news.judul_berita" placeholder="Masukkan Judul"></ion-input>
+  </ion-item>
+  <ion-item color="dark">
+    <ion-label position="stacked">Kategori</ion-label>
+    <ion-input [(ngModel)]="news.kategori" placeholder="Masukkan Kategori"></ion-input>
+  </ion-item>
+  <ion-item color="dark">
+    <ion-label position="stacked">Isi Berita</ion-label>
+    <ion-textarea [(ngModel)]="news.isi_berita" placeholder="Masukkan Isi Berita"></ion-textarea>
+  </ion-item>
+  <ion-item color="dark">
+  <ion-label position="stacked">Gambar</ion-label>
+  <ion-input [(ngModel)]="news.gambar" placeholder="Masukkan Gambar"></ion-input>
+  </ion-item>
+  <br><br>
+  <ion-button expand="block" (click)="submit()" color="primary">TAMBAH</ion-button>
+
+</ion-content>

@@ -1,0 +1,35 @@
+<ion-header >
+  <ion-toolbar color="dark">
+    <ion-button slot="start">
+      <ion-back-button defaultHref="/tabs" color="primary"></ion-back-button>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+  <ion-card color="primary">
+    <img src="{{news.gambar}}" onError="this.src='/assets/placeholder.jpg'">
+    <ion-card-header>
+      <ion-card-subtitle>{{news.kategori | uppercase}}</ion-card-subtitle>
+      <ion-card-title>{{news.judul_berita | titlecase}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{news.isi_berita}}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button color="dark">
+      <ion-icon md="caret-up" ios="chevron-up-circle-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button>
+        <ion-icon name="create" (click)="goEdit()"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="danger">
+        <ion-icon name="trash" (click)="delete(news)"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>

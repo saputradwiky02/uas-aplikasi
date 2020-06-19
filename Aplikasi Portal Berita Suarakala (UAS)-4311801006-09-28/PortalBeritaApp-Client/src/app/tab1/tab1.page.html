@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Beranda
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="dark">
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content 
+        pullingIcon="arrow-dropdown"
+        pullingText="Pull to refresh" 
+        refreshingSpinner="crescent"
+        refreshingText="Refreshing...">
+        </ion-refresher-content>
+      </ion-refresher>
+  <ion-header collapse="condense">
+    <ion-toolbar >
+      <ion-title size="large" color="primary">Beranda</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-card *ngFor="let news of berita" color="primary">
+    <img src="http://localhost:3000/img/{{news.gambar}}" onError="this.src='/assets/placeholder.jpg'"> 
+    <ion-card-header>
+      <ion-card-subtitle>{{news.kategori | uppercase}}</ion-card-subtitle>
+      <ion-card-title>{{news.judul_berita | titlecase}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+        {{news.isi_berita | slice:0:100}}...
+    </ion-card-content>
+    <ion-card-content>
+        <ion-button slot="end" (click)="goDetail(news)" color="dark">Selengkapnya</ion-button>
+    </ion-card-content>
+  </ion-card>
+<br><br>
+</ion-content>
