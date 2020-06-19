@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+          <ion-back-button defaultHref="/tabs/tab1"> </ion-back-button>
+          </ion-buttons>
+    <ion-title>Ubah Berita</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+  <ion-item color="dark" >
+    <ion-label position="stacked">Judul</ion-label>
+    <ion-input [(ngModel)]="news.judul_berita" placeholder="Masukkan Judul"></ion-input>
+  </ion-item>
+  <ion-item color="dark">
+    <ion-label position="stacked">Kategori</ion-label>
+    <ion-input [(ngModel)]="news.kategori" placeholder="Masukkan Kategori"></ion-input>
+  </ion-item>
+  <ion-item color="dark">
+    <ion-label position="stacked">Isi Berita</ion-label>
+    <ion-textarea [(ngModel)]="news.isi_berita" placeholder="Masukkan Isi Berita"></ion-textarea>
+  </ion-item>
+  <ion-item color="dark">
+  <ion-label position="stacked">Gambar</ion-label>
+  <ion-input [(ngModel)]="news.gambar" placeholder="Masukkan Gambar"></ion-input>
+  </ion-item>
+  <br><br>
+  <ion-button expand="block" (click)="update()" color="primary">UBAH</ion-button>
+</ion-content>
