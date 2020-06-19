@@ -1,0 +1,7 @@
+{
+  "name": "PortalBeritaApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
